@@ -2,9 +2,13 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+
+
+import imagePdam from "@/public/pdam-banner.png";
+import imageYOL from "@/public/logo_yol.jpg";
+import imagePMJ from "@/public/pmj.png";
+import imagePresensi from "@/public/epresensi-banner.png";
+import imagePagii from "@/public/pagii-logo.png";
 
 export const links = [
   {
@@ -62,25 +66,44 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
-    description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+    title: "PDAM GO",
+    description: "PDAM Go Ponorogo application has several service features such as billing, bill payment information, independent metering, new installation services, and complaint services which can be accessed anytime and anywhere.    ",
+    tags: ["React Native", "Javascript"],
+    imageUrl: imagePdam,
+    storeAndroid: "https://play.google.com/store/apps/details?id=com.pdamgo",
+    storeIOS: null
   },
   {
-    title: "rmtDev",
-    description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+    title: "PMJ",
+    description: "PMJ Smart brings solutions for your company in the digital era. It is a software-as-a-service (SaaS) based HRIS application that can contribute to increasing the efficiency of HR work. Monitor employee performance comprehensively in just one application.",
+    tags: ["React Native", "Javascript"],
+    imageUrl: imagePMJ,
+    storeAndroid: "https://play.google.com/store/apps/details?id=com.pulomasjaya&hl=en",
+    storeIOS: null
   },
   {
-    title: "Word Analytics",
-    description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+    title: "E-Presensi",
+    description: "E-Presence brings solutions for your company in the digital era. It is a software-as-a-service (SaaS) based HRIS application that can contribute to increasing the efficiency of HR work. Monitor employee performance comprehensively in just one application.",
+    tags: ["React Native", "Javascript"],
+    imageUrl: imagePresensi,
+    storeAndroid: "https://play.google.com/store/apps/details?id=id.co.basicteknologi.epresensi&hl=id&gl=US",
+    storeIOS: null
+  },
+  {
+    title: "Yogya Online Mobile",
+    description: " Yogya Online makes it easy for you to shop for your daily needs. Shopping for household products as well as the latest fashion needs can be done through easy, practical and reliable online shopping. You can also get the best and most economical prices with the promos presented at Yogya Online.",
+    tags: ["React Native", "Javascript", "Sails.Js"],
+    imageUrl: imageYOL,
+    storeAndroid: "https://play.google.com/store/apps/details?id=com.yogyagroup.its.yom&hl=id",
+    storeIOS: "https://apps.apple.com/id/app/yogya-online/id1532864110"
+  },
+  {
+    title: "Pagii",
+    description: "Easy Way to Check Attendance. Smart application to make it easier for employees and managers to manage attendance.",
+    tags: ["React Native", "Javascript"],
+    imageUrl: imagePagii,
+    storeAndroid: "https://play.google.com/store/apps/details?id=com.pagii&pcampaignid=web_share",
+    storeIOS: "https://apps.apple.com/id/app/pagii-solusi-absensi/id1610290503"
   },
 ] as const;
 
