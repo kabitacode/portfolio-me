@@ -66,6 +66,22 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "Yogya Online Mobile",
+    description: " Yogya Online makes it easy for you to shop for your daily needs. Shopping for household products as well as the latest fashion needs can be done through easy, practical and reliable online shopping. You can also get the best and most economical prices with the promos presented at Yogya Online.",
+    tags: ["React Native", "Javascript", "Sails.Js"],
+    imageUrl: imageYOL,
+    storeAndroid: "https://play.google.com/store/apps/details?id=com.yogyagroup.its.yom&hl=id",
+    storeIOS: "https://apps.apple.com/id/app/yogya-online/id1532864110"
+  },
+  {
+    title: "Pagii",
+    description: "Easy Way to Check Attendance. Smart application to make it easier for employees and managers to manage attendance.",
+    tags: ["React Native", "Javascript"],
+    imageUrl: imagePagii,
+    storeAndroid: "https://play.google.com/store/apps/details?id=com.pagii&pcampaignid=web_share",
+    storeIOS: "https://apps.apple.com/id/app/pagii-solusi-absensi/id1610290503"
+  },
+  {
     title: "PDAM GO",
     description: "PDAM Go Ponorogo application has several service features such as billing, bill payment information, independent metering, new installation services, and complaint services which can be accessed anytime and anywhere.    ",
     tags: ["React Native", "Javascript"],
@@ -88,22 +104,6 @@ export const projectsData = [
     imageUrl: imagePresensi,
     storeAndroid: "https://play.google.com/store/apps/details?id=id.co.basicteknologi.epresensi&hl=id&gl=US",
     storeIOS: null
-  },
-  {
-    title: "Yogya Online Mobile",
-    description: " Yogya Online makes it easy for you to shop for your daily needs. Shopping for household products as well as the latest fashion needs can be done through easy, practical and reliable online shopping. You can also get the best and most economical prices with the promos presented at Yogya Online.",
-    tags: ["React Native", "Javascript", "Sails.Js"],
-    imageUrl: imageYOL,
-    storeAndroid: "https://play.google.com/store/apps/details?id=com.yogyagroup.its.yom&hl=id",
-    storeIOS: "https://apps.apple.com/id/app/yogya-online/id1532864110"
-  },
-  {
-    title: "Pagii",
-    description: "Easy Way to Check Attendance. Smart application to make it easier for employees and managers to manage attendance.",
-    tags: ["React Native", "Javascript"],
-    imageUrl: imagePagii,
-    storeAndroid: "https://play.google.com/store/apps/details?id=com.pagii&pcampaignid=web_share",
-    storeIOS: "https://apps.apple.com/id/app/pagii-solusi-absensi/id1610290503"
   },
 ] as const;
 
