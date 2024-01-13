@@ -1,11 +1,13 @@
 "use client"
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import SectionHeading from './section-heading'
-import { motion, useScroll, useTransform, useViewportScroll } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from 'next/link';
 import { projectsData } from '@/lib/data';
 import { useIsSmall } from '@/utils/hooks/useMediaQuery';
+import { useInView } from 'react-intersection-observer';
+import useActiveSectionContext from '@/utils/hooks/useActiveSectionContext';
 
 
 
@@ -13,10 +15,17 @@ type propsProject = (typeof projectsData)[number];
 
 
 export default function Projects() {
-    const { scrollYProgress } = useViewportScroll()
-    const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
+    const { scrollYProgress } = useScroll()
+    const scale = useTransform(scrollYProgress, [0, 1], [0.5, 1.6]);
     const isSmall = useIsSmall();
+    const { ref, inView } = useInView();
+    const { setActiveSection } = useActiveSectionContext()
 
+    useEffect(() => {
+        if (inView) {
+            setActiveSection('Projects')
+        }
+    }, [inView, setActiveSection])
 
 
     const storeAndroidComponent = (param: string) => {
@@ -45,7 +54,7 @@ export default function Projects() {
 
     const ProjectSection = ({ title, description, imageUrl, storeAndroid, storeIOS }: propsProject) => (
         <motion.div
-            style={ isSmall ? {scale} : {}}
+            style={title != 'E-Presensi' && isSmall ? {scale} : {}}
             className="w-full md:w-1/2 p-2">
             <div className="flex-1 m-2 overflow-hidden rounded-lg shadow-md transition hover:shadow-2xl dark:shadow-gray-700/25">
                 <Link href={storeAndroid} target='_blank'>
@@ -76,6 +85,7 @@ export default function Projects() {
 
     return (
         <motion.section
+        ref={ref}
             className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}

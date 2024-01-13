@@ -1,15 +1,28 @@
 "use client";
 
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect } from 'react';
 import profile from "@/public/profile.jpg";
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { AiOutlineArrowRight, AiOutlineCloudDownload, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import useActiveSectionContext from '@/utils/hooks/useActiveSectionContext';
+import { useInView } from 'react-intersection-observer';
 
 export default function Intro() {
+  const { ref, inView } = useInView({
+    threshold: 0.75
+  });
+  const { setActiveSection } = useActiveSectionContext()
+
+  useEffect(() => {
+    if (inView) {
+      setActiveSection('Home')
+    }
+  }, [inView, setActiveSection])
+
   return (
-    <section className='mb-28 max-w-[50rem] text-center sm:mb-0'>
+    <section ref={ref} className='mb-28 max-w-[50rem] text-center sm:mb-0'>
       <div className="flex items-center justify-center">
         <div className='relative'>
           <motion.div
