@@ -9,7 +9,14 @@ import useActiveSectionContext from '@/utils/hooks/useActiveSectionContext';
 
 
 export default function Header() {
-const {activeSection, setActiveSection} = useActiveSectionContext()
+    const { activeSection, setActiveSection, setTimeLastClick } = useActiveSectionContext()
+
+
+    const onClickMenu = (link: any) => {
+        setActiveSection(link.name)
+        setTimeLastClick(Date.now())
+    }
+
     return (
         <header className='z-[999] relative'>
             <motion.div className='fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border
@@ -26,19 +33,19 @@ const {activeSection, setActiveSection} = useActiveSectionContext()
                     {
                         links.map(link => (
                             <motion.li key={link.hash} className='h-3/4 flex items-center justify-center'>
-                                <Link href={link.hash} onClick={() => setActiveSection(link.name)} className={clsx("flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition", {
+                                <Link href={link.hash} onClick={() => onClickMenu(link)} className={clsx("flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition", {
                                     "text-gray-950": activeSection === link.name
                                 })}>
                                     {link.name}
                                     {link.name === activeSection && (
-                                        <motion.span 
-                                        layoutId='activeSection'
-                                        transition={{
-                                            type: 'spring',
-                                            stiffness: 380,
-                                            damping: 30
-                                        }}
-                                        className='bg-gray-100 absolute rounded-full px-10 py-4 -z-10'></motion.span>
+                                        <motion.span
+                                            layoutId='activeSection'
+                                            transition={{
+                                                type: 'spring',
+                                                stiffness: 380,
+                                                damping: 30
+                                            }}
+                                            className='bg-gray-100 absolute rounded-full px-10 py-4 -z-10'></motion.span>
                                     )}
                                 </Link>
                             </motion.li>

@@ -6,20 +6,19 @@ import profile from "@/public/profile.jpg";
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { AiOutlineArrowRight, AiOutlineCloudDownload, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import useActiveSectionContext from '@/utils/hooks/useActiveSectionContext';
 import { useInView } from 'react-intersection-observer';
+import useActiveSectionContext from '@/utils/hooks/useActiveSectionContext';
 
 export default function Intro() {
-  const { ref, inView } = useInView({
-    threshold: 0.75
-  });
-  const { setActiveSection } = useActiveSectionContext()
+
+  const { ref, inView } = useInView();
+  const { setActiveSection, timeLastClick } = useActiveSectionContext()
 
   useEffect(() => {
-    if (inView) {
-      setActiveSection('Home')
+    if (inView && Date.now() - timeLastClick > 1000) {
+      setActiveSection("Home")
     }
-  }, [inView, setActiveSection])
+  }, [inView, setActiveSection, timeLastClick])
 
   return (
     <section ref={ref} className='mb-28 max-w-[50rem] text-center sm:mb-0'>
@@ -78,8 +77,8 @@ export default function Intro() {
           delay: 0.1
         }}
         className='flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium'>
-        <Link href={'#contact'} className='group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition'>Contact me here <AiOutlineArrowRight className='opacity-70 group-hover:translate-x-1 transition'/></Link>
-        <a download={true} href='/public/CV - Muhamad Zulfiqor.pdf' className='bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 group active:scale-105 transition cursor-pointer border border-black/10'>Download CV <AiOutlineCloudDownload className='opacity-60 group-hover:translate-y-1 cursor-pointer'/></a>
+        <Link href={'#contact'} className='group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition'>Contact me here <AiOutlineArrowRight className='opacity-70 group-hover:translate-x-1 transition' /></Link>
+        <a download={true} href='/public/CV - Muhamad Zulfiqor.pdf' className='bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 group active:scale-105 transition cursor-pointer border border-black/10'>Download CV <AiOutlineCloudDownload className='opacity-60 group-hover:translate-y-1 cursor-pointer' /></a>
         <a className='bg-white p-4 flex text-gray-700 items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] group active:scale-105 transition cursor-pointer border border-black/10 hover:text-gray-950' href="https://linkedin" target='_blank'><AiFillLinkedin /></a>
         <a className='bg-white p-4 flex text-gray-700 items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] group active:scale-105 transition cursor-pointer border border-black/10 hover:text-gray-950' href="https://github.com" target='_blank'><AiFillGithub /></a>
       </motion.div>

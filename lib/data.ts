@@ -2,6 +2,8 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
+import { IoLogoHtml5, IoLogoCss3, IoLogoJavascript } from "react-icons/io";
+import { SiFlutter, SiRedux, SiTypescript } from "react-icons/si";
 
 
 import imagePdam from "@/public/pdam-banner.png";
@@ -36,6 +38,8 @@ export const links = [
     hash: "#contact",
   },
 ] as const;
+
+
 
 export const experiencesData = [
   {
@@ -108,23 +112,33 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
-  "Framer Motion",
+  {
+    title: "HTML",
+    icon: React.createElement(IoLogoHtml5),
+
+  },
+  {
+    title: "CSS",
+    icon: React.createElement(IoLogoCss3),
+  },
+  {
+    title: "Javascript",
+    icon: React.createElement(IoLogoJavascript),
+  },
+  {
+    title: "TypeScript",
+    icon: React.createElement(SiTypescript),
+  },
+  {
+    title: "Redux",
+    icon: React.createElement(SiRedux),
+  },
+  {
+    title: "React Native",
+    icon: React.createElement(FaReact),
+  },
+  {
+    title: "Flutter",
+    icon: React.createElement(SiFlutter),
+  },
 ] as const;

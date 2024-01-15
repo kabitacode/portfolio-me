@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect } from 'react'
 import SectionHeading from './section-heading'
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
@@ -9,23 +9,22 @@ import { useIsSmall } from '@/utils/hooks/useMediaQuery';
 import { useInView } from 'react-intersection-observer';
 import useActiveSectionContext from '@/utils/hooks/useActiveSectionContext';
 
-
-
 type propsProject = (typeof projectsData)[number];
-
 
 export default function Projects() {
     const { scrollYProgress } = useScroll()
     const scale = useTransform(scrollYProgress, [0, 1], [0.5, 1.6]);
     const isSmall = useIsSmall();
     const { ref, inView } = useInView();
-    const { setActiveSection } = useActiveSectionContext()
-
+    const { setActiveSection, timeLastClick } = useActiveSectionContext()
+  
     useEffect(() => {
-        if (inView) {
-            setActiveSection('Projects')
-        }
-    }, [inView, setActiveSection])
+      if (inView && Date.now() - timeLastClick > 1000) {
+        setActiveSection("Projects")
+      }
+    }, [inView, setActiveSection, timeLastClick])
+
+    
 
 
     const storeAndroidComponent = (param: string) => {
@@ -54,9 +53,9 @@ export default function Projects() {
 
     const ProjectSection = ({ title, description, imageUrl, storeAndroid, storeIOS }: propsProject) => (
         <motion.div
-            style={title != 'E-Presensi' && isSmall ? {scale} : {}}
+            style={title != 'E-Presensi' && isSmall ? { scale } : {}}
             className="w-full md:w-1/2 p-2">
-            <div className="flex-1 m-2 overflow-hidden rounded-lg shadow-md transition hover:shadow-2xl dark:shadow-gray-700/25">
+            <div className="flex-1 m-2 md:mb-1 mb-3 overflow-hidden rounded-lg shadow-lg transition hover:shadow-2xl dark:shadow-gray-700/25">
                 <Link href={storeAndroid} target='_blank'>
                     <Image
                         alt="Office"
@@ -85,7 +84,7 @@ export default function Projects() {
 
     return (
         <motion.section
-        ref={ref}
+            ref={ref}
             className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
