@@ -1,14 +1,11 @@
 "use client"
 import React, { useEffect } from 'react'
 import SectionHeading from './section-heading'
-import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
-import useActiveSectionContext from '@/utils/hooks/useActiveSectionContext';
-import { skillsData } from '@/lib/data';
-import { IoIosAdd, IoLogoCss3, IoLogoHtml5, IoLogoJavascript, IoMdContacts } from 'react-icons/io';
+import { IoLogoCss3, IoLogoHtml5, IoLogoJavascript} from 'react-icons/io';
 import { SiFlutter, SiReact, SiRedux, SiTypescript } from 'react-icons/si';
-import { useIsMedium, useIsSmall } from '@/utils/hooks/useMediaQuery';
 import Link from 'next/link';
+import { useActiveSectionContext, useIsMedium, useIsSmall } from '@/utils/hooks';
 
 
 export default function Skils() {

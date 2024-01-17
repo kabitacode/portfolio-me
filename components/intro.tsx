@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { AiOutlineArrowRight, AiOutlineCloudDownload, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { useInView } from 'react-intersection-observer';
-import useActiveSectionContext from '@/utils/hooks/useActiveSectionContext';
+import { useActiveSectionContext } from '@/utils/hooks';
 
 export default function Intro() {
 

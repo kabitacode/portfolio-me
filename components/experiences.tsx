@@ -2,11 +2,10 @@
 import React, { useEffect } from 'react'
 import SectionHeading from './section-heading'
 import { useInView } from 'react-intersection-observer';
-import useActiveSectionContext from '@/utils/hooks/useActiveSectionContext';
 import { experiencesData } from '@/lib/data';
-import { useIsMedium, useIsSmall } from '@/utils/hooks/useMediaQuery';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import { useActiveSectionContext } from '@/utils/hooks';
 
 
 export default function Experience() {

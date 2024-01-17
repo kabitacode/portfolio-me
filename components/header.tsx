@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { links } from '@/lib/data';
 import Link from 'next/link';
 import clsx from 'clsx';
-import useActiveSectionContext from '@/utils/hooks/useActiveSectionContext';
+import { useActiveSectionContext } from '@/utils/hooks';
 
 
 export default function Header() {

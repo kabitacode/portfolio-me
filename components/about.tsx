@@ -3,7 +3,8 @@ import React, { useEffect } from 'react'
 import SectionHeading from './section-heading'
 import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
-import useActiveSectionContext from '@/utils/hooks/useActiveSectionContext';
+import { useActiveSectionContext } from '@/utils/hooks';
+
 
 export default function About() {
   const { ref, inView } = useInView();
