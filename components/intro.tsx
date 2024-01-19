@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import React, { useEffect } from 'react';
-import profile from "@/public/profile.jpg";
+import me from "@/public/me.jpeg";
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { AiOutlineArrowRight, AiOutlineCloudDownload, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
@@ -34,7 +34,7 @@ export default function Intro() {
           >
             <Image
               alt='me'
-              src={profile}
+              src={me}
               width='200'
               height='200'
               quality={'95'}

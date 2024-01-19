@@ -29,15 +29,15 @@ export default function About() {
       <SectionHeading>About Me</SectionHeading>
 
       <p className="mb-3">
-        I have the experience to create a Web & Mobile Apps Template from scratch and use the latest technology.
+        I have the experience to create a Web & Mobile Apps from scratch and use the latest technology.
         which will accelerate the development process, with the best design. to produce a responsive, high-quality, and great user experience.
         Use I believe that good relationships with customers and my relationships are based on quality work.
       </p>
       <p>
         My core stack is{" "}
         <span className="font-medium">
-          React Native
-        </span> My core stack is React Native. I am always looking to learn new technologies, like Flutter & SwiftUI. I am currently looking for a{" "}
+          React Native.
+        </span> I also improve my skills like Flutter & SwiftUI. I am currently looking for a{" "}
         <span className="font-medium">full-time</span> or <span className="font-medium">remote</span> <span className="font-medium">position</span> as a software
         developer.
       </p>
