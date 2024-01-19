@@ -65,7 +65,7 @@ export default function Intro() {
         <span className='font-bold'>Hello, I'm Muhamad Zulfiqor.</span> I'm a{" "}
         <span className='font-bold'>Front End Developer</span> with{" "}
         <span className='font-bold'>3 years</span> of experience. I enjoy
-        building <span className='italic'>sites & apps</span>. My Focus is{" "}
+        building <span className='italic'>web & apps</span>. My Focus is{" "}
         <span className='underline'>React Native</span>.
 
       </motion.h1>
@@ -81,9 +81,11 @@ export default function Intro() {
           setActiveSection("Contact");
           setTimeLastClick(Date.now());
         }} className='group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition'>Contact me here <AiOutlineArrowRight className='opacity-70 group-hover:translate-x-1 transition' /></Link>
-      <Link href={`${process.env.MY_CV}`} target='_blank'><p className='bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 group active:scale-105 transition cursor-pointer border border-black/10 dark:bg-white/10'>Download CV <AiOutlineCloudDownload className='opacity-60 group-hover:translate-y-1 cursor-pointer' /></p></Link>
-        <a className='bg-white p-4 flex text-gray-700 items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] group active:scale-105 transition cursor-pointer border border-black/10 hover:text-gray-950 dark:bg-white/10 dark:text-white/60' href="https://linkedin" target='_blank'><AiFillLinkedin /></a>
-        <a className='bg-white p-4 flex text-gray-700 items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] group active:scale-105 transition cursor-pointer border border-black/10 hover:text-gray-950 dark:bg-white/10 dark:text-white/60' href="https://github.com" target='_blank'><AiFillGithub /></a>
+        <Link href={`${process.env.MY_CV}`} target='_blank'><p className='bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 group active:scale-105 transition cursor-pointer border border-black/10 dark:bg-white/10'>Download CV <AiOutlineCloudDownload className='opacity-60 group-hover:translate-y-1 cursor-pointer' /></p></Link>
+        <div className='flex sm:flex-row flex-wrap sm:mt-0  mt-3'>
+          <a className='bg-white p-4 flex text-gray-700 mr-1 items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] group active:scale-105 transition cursor-pointer border border-black/10 hover:text-gray-950 dark:bg-white/10 dark:text-white/60' href={`${process.env.LINKEDIN}`} target='_blank'><AiFillLinkedin /></a>
+          <a className='bg-white p-4 flex text-gray-700 items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] group active:scale-105 transition cursor-pointer border border-black/10 hover:text-gray-950 dark:bg-white/10 dark:text-white/60' href={`${process.env.GITHUB}`} target='_blank'><AiFillGithub /></a>
+        </div>
       </motion.div>
     </section>
   )

@@ -62,7 +62,7 @@ export const experiencesData = [
     title: "Mobile Developer",
     location: "Bandung (West Java) - Indonesia",
     description:
-      "I worked as a mobile developer (React Native) for 1.5 years. I was also assigned as an outsourcer at Yogya Group to maintain their applications. I also improve skills like Flutter and SwiftUI.",
+      "I worked as a mobile developer (React Native) for 1.5 years. I was also assigned as an outsourcer at Yogya Group to maintain their applications.",
     icon: React.createElement(CgWorkAlt),
     date: "2022 - 2024",
   },

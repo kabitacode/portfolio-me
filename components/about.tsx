@@ -37,7 +37,7 @@ export default function About() {
         My core stack is{" "}
         <span className="font-medium">
           React Native
-        </span> My core stack is React Native I am always looking to learn new technologies, like Flutter & SwiftUI. I am currently looking for a{" "}
+        </span> My core stack is React Native. I am always looking to learn new technologies, like Flutter & SwiftUI. I am currently looking for a{" "}
         <span className="font-medium">full-time</span> or <span className="font-medium">remote</span> <span className="font-medium">position</span> as a software
         developer.
       </p>
