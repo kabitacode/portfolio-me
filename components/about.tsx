@@ -37,7 +37,7 @@ export default function About() {
         My core stack is{" "}
         <span className="font-medium">
           React Native.
-        </span> I also improve my skills like Flutter & SwiftUI. I am currently looking for a{" "}
+        </span> I also improve my skills like Kotlin & SwiftUI. I am currently looking for a{" "}
         <span className="font-medium">full-time</span> or <span className="font-medium">remote</span> <span className="font-medium">position</span> as a software
         developer.
       </p>

@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import SectionHeading from './section-heading'
 import { useInView } from 'react-intersection-observer';
 import { IoLogoCss3, IoLogoHtml5, IoLogoJavascript } from 'react-icons/io';
-import { SiFigma, SiFlutter, SiGit, SiReact, SiRedux, SiTypescript } from 'react-icons/si';
+import { SiAndroidstudio, SiFigma, SiFlutter, SiGit, SiNextdotjs, SiReact, SiRedux, SiTypescript, SiXcode } from 'react-icons/si';
 import Link from 'next/link';
 import { useActiveSectionContext, useIsMedium, useIsSmall } from '@/utils/hooks';
 
@@ -40,16 +40,14 @@ export default function Skils() {
                 <div className="bg-white dark:bg-yellow-300 w-16 h-16 flex py-2 md:p-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-yellow-300 duration-300">
                     <IoLogoJavascript size={getSize()} />
                 </div>
-                <div className="bg-white dark:bg-blue-300 w-16 h-16 flex py-2 md:p-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-300 duration-300">
-                    <SiFigma size={getSize()} />
-                </div>
-            </div>
-            <div className="flex md:flex-row flex-wrap md:items-center">
                 <Link href='https://www.typescriptlang.org/' target='_blank'>
                     <div className="bg-white dark:bg-indigo-300 w-16 h-16 flex py-2 md:p-4 mb-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-300 duration-300">
                         <SiTypescript size={getSize()} />
                     </div>
                 </Link>
+            </div>
+            <div className="flex md:flex-row flex-wrap md:items-center">
+
                 <Link href={'https://redux.js.org/'} target='_blank'>
                     <div className="bg-white dark:bg-indigo-400 w-16 h-16 flex py-2 md:p-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-400 duration-300">
                         <SiRedux size={getSize()} />
@@ -60,9 +58,33 @@ export default function Skils() {
                         <SiReact size={getSize()} />
                     </div>
                 </Link>
-                <div className="bg-white dark:bg-orange-400 w-16 h-16 flex py-2 md:p-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-orange-400 duration-300">
-                    <SiGit size={getSize()} />
-                </div>      
+                <Link href={'https://nextjs.org/'} target='_blank'>
+                    <div className="bg-white dark:bg-blue-300 w-16 h-16 flex py-2 md:p-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-300 duration-300">
+                        <SiNextdotjs size={getSize()} />
+                    </div>
+                </Link>
+            </div>
+            <div className="flex md:flex-row flex-wrap md:items-center">
+                <Link href={' https://www.figma.com/'} target='_blank'>
+                    <div className="bg-white dark:bg-blue-300 w-16 h-16 flex py-2 md:p-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-300 duration-300">
+                        <SiFigma size={getSize()} />
+                    </div>
+                </Link>
+                <Link href={'https://git-scm.com/'} target='_blank'>
+                    <div className="bg-white dark:bg-blue-300 w-16 h-16 flex py-2 md:p-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-300 duration-300">
+                        <SiGit size={getSize()} />
+                    </div>
+                </Link>
+                <Link href={'https://developer.android.com/'} target='_blank'>
+                    <div className="bg-white dark:bg-blue-300 w-16 h-16 flex py-2 md:p-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-300 duration-300">
+                        <SiAndroidstudio size={getSize()} />
+                    </div>
+                </Link>
+                <Link href={'https://developer.apple.com/xcode/'} target='_blank'>
+                    <div className="bg-white dark:bg-blue-300 w-16 h-16 flex py-2 md:p-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-300 duration-300">
+                        <SiXcode size={getSize()} />
+                    </div>
+                </Link>
             </div>
         </section>
     )
