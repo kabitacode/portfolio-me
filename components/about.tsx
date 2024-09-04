@@ -4,6 +4,7 @@ import SectionHeading from './section-heading'
 import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
 import { useActiveSectionContext } from '@/utils/hooks';
+import { BorderBeam } from "@/components/magicui/border-beam";
 
 
 export default function About() {
@@ -20,12 +21,14 @@ export default function About() {
   return (
     <motion.section
       ref={ref}
-      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
+      className="relative mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
       id="about"
     >
+      <BorderBeam size={250} duration={12} delay={9} />
+
       <SectionHeading>About Me</SectionHeading>
 
       <p className="mb-3">
