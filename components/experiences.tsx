@@ -25,7 +25,7 @@ export default function Experience() {
     return (
         <section ref={ref} className='scroll-mt-28 mb-28 sm:mb-40' id='experience'>
             <SectionHeading>Experience</SectionHeading>
-            <VerticalTimeline lineColor=''>
+            <VerticalTimeline lineColor={theme === "light" ? "#37415140" : "#F7F7F7"}>
                 {
                     experiencesData.map((item, index) => {
                         return (
