@@ -68,7 +68,7 @@ export default function Intro() {
         <span className='font-bold'>Front End Developer</span> with{" "}
         <span className='font-bold'>3+ years</span> of experience. I enjoy
         building <span className='italic'>web & apps</span>. My Focus is{" "}
-        <span className='underline'>React Native</span>.
+        <span className='underline'>React Native & Flutter</span>.
 
       </motion.h1>
 
