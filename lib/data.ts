@@ -11,6 +11,8 @@ import imageYOL from "@/public/logo_yol.jpg";
 import imagePMJ from "@/public/pmj.png";
 import imagePresensi from "@/public/epresensi-banner.png";
 import imagePagii from "@/public/pagii-logo.png";
+import imageAHB from "@/public/ahb.png";
+import imageMyYogya from "@/public/myYogya.png";
 
 export const links = [
   {
@@ -46,36 +48,55 @@ export const experiencesData = [
     title: "Faletehan University",
     location: "Bandung (West Java) - Indonesia",
     description:
-      "I graduated as an Informatics Engineer",
+      "Bachelor of Computer Science (Informatics Engineering)",
     icon: React.createElement(LuGraduationCap),
-    date: "2020 - 2024",
+    date: "October 2020 - October 2024",
   },
   {
     title: "Mobile Developer",
     location: "Bandung (West Java) - Indonesia",
     description:
-      "I worked as a mobile developer (React Native) for 2 years.",
+      "I have 2.7 years of experience working as a Mobile Developer specializing in React Native.",
     icon: React.createElement(CgWorkAlt),
-    date: "2020 - 2022",
+    date: "January 2020 - June 2022",
   },
   {
     title: "Mobile Developer",
     location: "Bandung (West Java) - Indonesia",
     description:
-      "I worked as a mobile developer (React Native) for 1.5 years. I was also assigned as an outsourcer at Yogya Group to maintain their applications.",
+      "I have 2.6 years of experience as a Mobile Developer specializing in React and React Native. For 1 year, I was outsourced to Yogya Group, where I was responsible for maintaining their mobile e-commerce applications.",
     icon: React.createElement(CgWorkAlt),
-    date: "2022 - 2024",
+    date: "December 2022 - May 2025",
   },
 ] as const;
 
 export const projectsData = [
   {
+    title: "Amanah Hartanah Bumiputera",
+    description: "AHB is sponsored by PHB, and was previously managed by Maybank Asset Management Sdn Bhd (MAM) until PHBAM took over as manager on 1 July 2024. AHB’s Trustee is AmanahRaya Trustees Berhad.",
+    tags: ["React Native", "Typescript"],
+    imageUrl: imageAHB,
+    storeAndroid: "",
+    storeIOS: "",
+    detail: "https://www.phbam.com.my/",
+  },
+  {
+    title: "MyYOGYA 2.0",
+    description: "MyYOGYA is here as a digital application from YOGYA Group to provide new experiences and provide for YOGYA consumers.",
+    tags: ["React Native", "Javascript"],
+    imageUrl: imageMyYogya,
+    storeAndroid: "https://play.google.com/store/apps/details?id=com.yogyagroup.its.myyogya&hl=id",
+    storeIOS: "https://apps.apple.com/id/app/myyogya/id1468672431",
+    detail: "",
+  },
+  {
     title: "Yogya Online Mobile",
-    description: " Yogya Online makes it easy for you to shop for your daily needs. Shopping for household products as well as the latest fashion needs can be done through easy, practical and reliable online shopping. You can also get the best and most economical prices with the promos presented at Yogya Online.",
+    description: "Yogya Online makes it easy for you to shop for your daily needs. Shopping for household products as well as the latest fashion needs can be done through easy, practical and reliable online shopping. You can also get the best and most economical prices with the promos presented at Yogya Online.",
     tags: ["React Native", "Javascript", "Sails.Js"],
     imageUrl: imageYOL,
     storeAndroid: "https://play.google.com/store/apps/details?id=com.yogyagroup.its.yom&hl=id",
-    storeIOS: "https://apps.apple.com/id/app/yogya-online/id1532864110"
+    storeIOS: "https://apps.apple.com/id/app/yogya-online/id1532864110",
+    detail: "",
   },
   {
     title: "Pagii",
@@ -83,7 +104,8 @@ export const projectsData = [
     tags: ["React Native", "Javascript"],
     imageUrl: imagePagii,
     storeAndroid: "https://play.google.com/store/apps/details?id=com.pagii&pcampaignid=web_share",
-    storeIOS: "https://apps.apple.com/id/app/pagii-solusi-absensi/id1610290503"
+    storeIOS: "https://apps.apple.com/id/app/pagii-solusi-absensi/id1610290503",
+    detail: ""
   },
   {
     title: "PDAM GO",
@@ -91,7 +113,8 @@ export const projectsData = [
     tags: ["React Native", "Javascript"],
     imageUrl: imagePdam,
     storeAndroid: "https://play.google.com/store/apps/details?id=com.pdamgo",
-    storeIOS: null
+    storeIOS: null,
+    detail: ""
   },
   {
     title: "PMJ",
@@ -99,7 +122,8 @@ export const projectsData = [
     tags: ["React Native", "Javascript"],
     imageUrl: imagePMJ,
     storeAndroid: "https://play.google.com/store/apps/details?id=com.pulomasjaya&hl=en",
-    storeIOS: null
+    storeIOS: null,
+    detail: ""
   },
   {
     title: "E-Presensi",
@@ -107,7 +131,8 @@ export const projectsData = [
     tags: ["React Native", "Javascript"],
     imageUrl: imagePresensi,
     storeAndroid: "https://play.google.com/store/apps/details?id=id.co.basicteknologi.epresensi&hl=id&gl=US",
-    storeIOS: null
+    storeIOS: null,
+    detail: ""
   },
 ] as const;
 
