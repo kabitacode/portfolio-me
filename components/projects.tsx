@@ -16,14 +16,14 @@ export default function Projects() {
     const isSmall = useIsSmall();
     const { ref, inView } = useInView();
     const { setActiveSection, timeLastClick } = useActiveSectionContext()
-  
+
     useEffect(() => {
-      if (inView && Date.now() - timeLastClick > 1000) {
-        setActiveSection("Projects")
-      }
+        if (inView && Date.now() - timeLastClick > 1000) {
+            setActiveSection("Projects")
+        }
     }, [inView, setActiveSection, timeLastClick])
 
-    
+
 
 
     const storeAndroidComponent = (param: string) => {
@@ -50,7 +50,7 @@ export default function Projects() {
         )
     }
 
-    const ProjectSection = ({ title, description, imageUrl, storeAndroid, storeIOS }: propsProject) => (
+    const ProjectSection = ({ title, description, imageUrl, storeAndroid, storeIOS, detail }: propsProject) => (
         <motion.div
             style={title != 'E-Presensi' && isSmall ? { scale } : {}}
             className="w-full md:w-1/2 p-2">
@@ -72,10 +72,20 @@ export default function Projects() {
                     <p className="mt-2 mb-4 line-clamp-3 text-sm/relaxed text-gray-500 dark:text-gray-400">
                         {description}
                     </p>
-                    <div className="flex md:flex-row flex-col justify-around items-center">
-                        {storeAndroidComponent(storeAndroid)}
-                        {storeIOS != null && storeIOSComponent(storeIOS)}
-                    </div>
+                    {
+                        detail != "" ?
+                            <div className="flex md:flex-row flex-col justify-around items-center">
+                                <Link href={detail} target='_blank' className="w-full mb-3 md:mb-0 sm:w-auto bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-12 py-[10px] dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                                    <div className="text-center">
+                                        <div className="font-sans text-md font-semibold">Detail</div>
+                                    </div>
+                                </Link>
+                            </div> :
+                            <div className="flex md:flex-row flex-col justify-around items-center">
+                                {storeAndroidComponent(storeAndroid)}
+                                {storeIOS != null && storeIOSComponent(storeIOS)}
+                            </div>
+                    }
                 </div>
             </div>
         </motion.div>
