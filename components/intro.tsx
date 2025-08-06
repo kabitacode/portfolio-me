@@ -65,10 +65,10 @@ export default function Intro() {
         animate={{ opacity: 1, y: 0 }}
         className='relative mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl'>
         <span className='font-bold'>Hello, I'm Muhamad Zulfiqor.</span> I'm a{" "}
-        <span className='font-bold'>Front End Developer</span> with{" "}
-        <span className='font-bold'>3+ years</span> of experience. I enjoy
-        building <span className='italic'>web & apps</span>. My Focus is{" "}
-        <span className='underline'>React Native & Flutter</span>.
+        <span className='font-bold'>Software Engineer</span> with over {" "}
+        <span className='font-bold'>4 years</span> of experience. I enjoy
+        building <span className='italic'>web & apps</span>. with{" "}
+        <span>attention to detail and focus on user experience</span>.
 
       </motion.h1>
 
