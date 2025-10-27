@@ -39,8 +39,7 @@ export default function About() {
         I believe strong client relationships are built on trust and the consistent delivery of quality work.
       </p>
       <p>
-        My core stack is <span className="font-medium">React</span> & <span className="font-medium">React Native</span>, and I’m currently sharpening my skills in <span className="font-medium">Kotlin</span> and <span className="font-medium">SwiftUI</span>.
-        I also have experience with hybrid frameworks like <span className="font-medium">Flutter</span>.
+        My core stack is <span className="font-medium">React</span> & <span className="font-medium">React Native</span>, I also have experience with hybrid frameworks like <span className="font-medium">Flutter</span>. I’m currently sharpening my skills in <span className="font-medium">Kotlin</span> and <span className="font-medium">SwiftUI</span>.
         I'm open to <span className="font-medium">full-time</span> or <span className="font-medium">remote</span> positions as a <span className="font-medium">Software Engineer</span>.
       </p>
 

@@ -54,16 +54,20 @@ export default function Skils() {
                 </Link>
             </div>
             <div className="flex md:flex-row flex-wrap md:items-center">
-                <div className="bg-white dark:bg-green-500 w-16 h-16 flex py-2 md:p-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-green-500 duration-300">
-                    <SiVuedotjs size={getSize()} />
-                </div>
-                <div className="bg-white w-16 h-16 dark:bg-blue-500 flex py-2 md:p-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-500 duration-300">
-                    <SiTypescript size={getSize()} />
-                </div>
+                <Link href={'https://vuejs.org/'} target='_blank'>
+                    <div className="bg-white dark:bg-green-500 w-16 h-16 flex py-2 md:p-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-green-500 duration-300">
+                        <SiVuedotjs size={getSize()} />
+                    </div>
+                </Link>
+                <Link href={'https://www.typescriptlang.org/'} target='_blank'>
+                    <div className="bg-white w-16 h-16 dark:bg-blue-500 flex py-2 md:p-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-500 duration-300">
+                        <SiTypescript size={getSize()} />
+                    </div>
+                </Link>
                 <div className="bg-white dark:bg-yellow-300 w-16 h-16 flex py-2 md:p-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-yellow-300 duration-300">
                     <IoLogoJavascript size={getSize()} />
                 </div>
-                <Link href='https://www.typescriptlang.org/' target='_blank'>
+                <Link href='https://www.swift.org/' target='_blank'>
                     <div className="bg-white dark:bg-orange-500 w-16 h-16 flex py-2 md:p-4 mb-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-orange-500 duration-300">
                         <SiSwift size={getSize()} />
                     </div>

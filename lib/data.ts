@@ -56,7 +56,7 @@ export const experiencesData = [
     title: "Mobile Developer",
     location: "Bandung (West Java) - Indonesia",
     description:
-      "I have 2.7 years of experience working as a Mobile Developer specializing in React Native.",
+      "",
     icon: React.createElement(CgWorkAlt),
     date: "January 2020 - June 2022",
   },
@@ -64,22 +64,13 @@ export const experiencesData = [
     title: "Mobile Developer",
     location: "Bandung (West Java) - Indonesia",
     description:
-      "I have 2.6 years of experience as a Mobile Developer specializing in React and React Native. For 1 year, I was outsourced to Yogya Group, where I was responsible for maintaining their mobile e-commerce applications.",
+      "I have 2.6 years of experience as a Mobile Developer. For 1 year, I was outsourced to Yogya Group, where I was responsible for maintaining their mobile e-commerce applications.",
     icon: React.createElement(CgWorkAlt),
     date: "December 2022 - May 2025",
   },
 ] as const;
 
 export const projectsData = [
-  {
-    title: "Amanah Hartanah Bumiputera",
-    description: "AHB is sponsored by PHB, and was previously managed by Maybank Asset Management Sdn Bhd (MAM) until PHBAM took over as manager on 1 July 2024. AHB’s Trustee is AmanahRaya Trustees Berhad.",
-    tags: ["React Native", "Typescript"],
-    imageUrl: imageAHB,
-    storeAndroid: "",
-    storeIOS: "",
-    detail: "https://www.phbam.com.my/",
-  },
   {
     title: "MyYOGYA 2.0",
     description: "MyYOGYA is here as a digital application from YOGYA Group to provide new experiences and provide for YOGYA consumers.",
@@ -88,6 +79,15 @@ export const projectsData = [
     storeAndroid: "https://play.google.com/store/apps/details?id=com.yogyagroup.its.myyogya&hl=id",
     storeIOS: "https://apps.apple.com/id/app/myyogya/id1468672431",
     detail: "",
+  },
+   {
+    title: "Pagii",
+    description: "Easy Way to Check Attendance. Smart application to make it easier for employees and managers to manage attendance.",
+    tags: ["React Native", "Javascript"],
+    imageUrl: imagePagii,
+    storeAndroid: "https://play.google.com/store/apps/details?id=com.pagii&pcampaignid=web_share",
+    storeIOS: "https://apps.apple.com/id/app/pagii-solusi-absensi/id1610290503",
+    detail: ""
   },
   {
     title: "Yogya Online Mobile",
@@ -98,14 +98,14 @@ export const projectsData = [
     storeIOS: "https://apps.apple.com/id/app/yogya-online/id1532864110",
     detail: "",
   },
-  {
-    title: "Pagii",
-    description: "Easy Way to Check Attendance. Smart application to make it easier for employees and managers to manage attendance.",
-    tags: ["React Native", "Javascript"],
-    imageUrl: imagePagii,
-    storeAndroid: "https://play.google.com/store/apps/details?id=com.pagii&pcampaignid=web_share",
-    storeIOS: "https://apps.apple.com/id/app/pagii-solusi-absensi/id1610290503",
-    detail: ""
+   {
+    title: "Amanah Hartanah Bumiputera",
+    description: "AHB is sponsored by PHB, and was previously managed by Maybank Asset Management Sdn Bhd (MAM) until PHBAM took over as manager on 1 July 2024. AHB’s Trustee is AmanahRaya Trustees Berhad.",
+    tags: ["React Native", "Typescript"],
+    imageUrl: imageAHB,
+    storeAndroid: "",
+    storeIOS: "",
+    detail: "https://www.phbam.com.my/",
   },
   {
     title: "PDAM GO",
