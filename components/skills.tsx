@@ -3,9 +3,10 @@ import React, { useEffect } from 'react'
 import SectionHeading from './section-heading'
 import { useInView } from 'react-intersection-observer';
 import { IoLogoCss3, IoLogoHtml5, IoLogoJavascript } from 'react-icons/io';
-import { SiAndroidstudio, SiFigma, SiFlutter, SiGit, SiNextdotjs, SiReact, SiRedux, SiTypescript, SiXcode, SiSwift, SiVuedotjs } from 'react-icons/si';
+import { SiAndroidstudio, SiFigma, SiFlutter, SiGit, SiNextdotjs, SiReact, SiRedux, SiTypescript, SiXcode, SiSwift, SiVuedotjs, SiNodedotjs, SiDart, SiJetpackcompose, SiAngular, SiGoland, SiRealm } from 'react-icons/si';
 import Link from 'next/link';
 import { useActiveSectionContext, useIsMedium, useIsSmall } from '@/utils/hooks';
+import { FaGolang } from "react-icons/fa6";
 
 
 export default function Skils() {
@@ -47,16 +48,22 @@ export default function Skils() {
                         <SiNextdotjs size={getSize()} />
                     </div>
                 </Link>
-                <Link href={'https://redux.js.org/'} target='_blank'>
-                    <div className="bg-white dark:bg-indigo-400 w-16 h-16 flex py-2 md:p-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-400 duration-300">
-                        <SiRedux size={getSize()} />
-                    </div>
-                </Link>
-            </div>
-            <div className="flex md:flex-row flex-wrap md:items-center">
                 <Link href={'https://vuejs.org/'} target='_blank'>
                     <div className="bg-white dark:bg-green-500 w-16 h-16 flex py-2 md:p-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-green-500 duration-300">
                         <SiVuedotjs size={getSize()} />
+                    </div>
+                </Link>
+                <Link href={'https://angular.dev/'} target='_blank'>
+                    <div className="bg-white dark:bg-cyan-300 w-16 h-16 flex py-2 md:p-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-300 duration-300">
+                        <SiAngular size={getSize()} />
+                    </div>
+                </Link>
+
+            </div>
+            <div className="flex md:flex-row flex-wrap md:items-center">
+                <Link href={'https://redux.js.org/'} target='_blank'>
+                    <div className="bg-white dark:bg-indigo-400 w-16 h-16 flex py-2 md:p-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-400 duration-300">
+                        <SiRedux size={getSize()} />
                     </div>
                 </Link>
                 <Link href={'https://www.typescriptlang.org/'} target='_blank'>
@@ -64,9 +71,16 @@ export default function Skils() {
                         <SiTypescript size={getSize()} />
                     </div>
                 </Link>
-                <div className="bg-white dark:bg-yellow-300 w-16 h-16 flex py-2 md:p-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-yellow-300 duration-300">
-                    <IoLogoJavascript size={getSize()} />
-                </div>
+                <Link href={'https://nodejs.org/en'} target='_blank'>
+                    <div className="bg-white dark:bg-cyan-300 w-16 h-16 flex py-2 md:p-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-300 duration-300">
+                        <SiNodedotjs size={getSize()} />
+                    </div>
+                </Link>
+                <Link href={'https://dart.dev/'} target='_blank'>
+                    <div className="bg-white dark:bg-cyan-300 w-16 h-16 flex py-2 md:p-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-300 duration-300">
+                        <SiDart size={getSize()} />
+                    </div>
+                </Link>
                 <Link href='https://www.swift.org/' target='_blank'>
                     <div className="bg-white dark:bg-orange-500 w-16 h-16 flex py-2 md:p-4 mb-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-orange-500 duration-300">
                         <SiSwift size={getSize()} />
@@ -74,16 +88,9 @@ export default function Skils() {
                 </Link>
             </div>
             <div className="flex md:flex-row flex-wrap md:items-center">
-                <Link href={' https://www.figma.com/'} target='_blank'>
-                    <div className="bg-white dark:bg-pink-400 w-16 h-16 flex py-2 md:p-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-300 duration-300">
-                        <SiFigma size={getSize()} />
-                    </div>
-                </Link>
-                <Link href={'https://git-scm.com/'} target='_blank'>
-                    <div className="bg-white dark:bg-cyan-300 w-16 h-16 flex py-2 md:p-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-300 duration-300">
-                        <SiGit size={getSize()} />
-                    </div>
-                </Link>
+                <div className="bg-white dark:bg-yellow-300 w-16 h-16 flex py-2 md:p-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-yellow-300 duration-300">
+                    <IoLogoJavascript size={getSize()} />
+                </div>
                 <Link href={'https://developer.android.com/'} target='_blank'>
                     <div className="bg-white dark:bg-green-400 w-16 h-16 flex py-2 md:p-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-300 duration-300">
                         <SiAndroidstudio size={getSize()} />
@@ -92,6 +99,16 @@ export default function Skils() {
                 <Link href={'https://developer.apple.com/xcode/'} target='_blank'>
                     <div className="bg-white dark:bg-blue-400 w-16 h-16 flex py-2 md:p-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-300 duration-300">
                         <SiXcode size={getSize()} />
+                    </div>
+                </Link>
+                <Link href={'https://www.figma.com/'} target='_blank'>
+                    <div className="bg-white dark:bg-pink-400 w-16 h-16 flex py-2 md:p-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-300 duration-300">
+                        <SiFigma size={getSize()} />
+                    </div>
+                </Link>
+                <Link href={'https://www.mongodb.com/'} target='_blank'>
+                    <div className="bg-white dark:bg-pink-400 w-16 h-16 flex py-2 md:p-4 m-2 rounded-full shadow-md items-center justify-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-300 duration-300">
+                        <SiRealm size={getSize()} />
                     </div>
                 </Link>
             </div>

@@ -13,6 +13,7 @@ import imagePresensi from "@/public/epresensi-banner.png";
 import imagePagii from "@/public/pagii-logo.png";
 import imageAHB from "@/public/ahb.png";
 import imageMyYogya from "@/public/myYogya.png";
+import rawArtist from "@/public/rawartist.png";
 
 export const links = [
   {
@@ -53,18 +54,18 @@ export const experiencesData = [
     date: "October 2020 - October 2024",
   },
   {
-    title: "Mobile Developer",
+    title: "Software Developer",
     location: "Bandung (West Java) - Indonesia",
     description:
-      "",
+      "Self-taught Software Developer who learned independently and immediately worked on real mobile projects",
     icon: React.createElement(CgWorkAlt),
     date: "January 2020 - June 2022",
   },
   {
-    title: "Mobile Developer",
+    title: "Software Developer",
     location: "Bandung (West Java) - Indonesia",
     description:
-      "I have 2.6 years of experience as a Mobile Developer. For 1 year, I was outsourced to Yogya Group, where I was responsible for maintaining their mobile e-commerce applications.",
+      "I have 2.6 years of experience as a Software Developer. For 1 year, I was outsourced to Yogya Group, where I was responsible for maintaining their mobile e-commerce applications.",
     icon: React.createElement(CgWorkAlt),
     date: "December 2022 - May 2025",
   },
@@ -88,6 +89,15 @@ export const projectsData = [
     storeAndroid: "https://play.google.com/store/apps/details?id=com.pagii&pcampaignid=web_share",
     storeIOS: "https://apps.apple.com/id/app/pagii-solusi-absensi/id1610290503",
     detail: ""
+  },
+   {
+    title: "RAWartists",
+    description: "Showcasing the independent creative community Collaborative events run by creative entrepreneurs across the globe.",
+    tags: ["HTML", "Javascript"],
+    imageUrl: rawArtist,
+    storeAndroid: "",
+    storeIOS: "",
+    detail: "https://rawartists.com/"
   },
   {
     title: "Yogya Online Mobile",
