@@ -1,3 +1,5 @@
+"use client";
+
 import ContactFormEmail from '@/email/contact-form-email';
 import { NextRequest, NextResponse } from 'next/server';
 import React from 'react';
