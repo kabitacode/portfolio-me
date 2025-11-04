@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { AiOutlineArrowRight, AiOutlineCloudDownload, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { useInView } from 'react-intersection-observer';
 import { useActiveSectionContext } from '@/utils/hooks';
+import Meteors from "@/components/magicui/meteors";
 
 export default function Intro() {
 
@@ -23,6 +24,7 @@ export default function Intro() {
   return (
     <section ref={ref} className='mb-28 max-w-[50rem] text-center sm:mb-0'>
       <div className="flex items-center justify-center">
+      <Meteors number={30} />
         <div className='relative'>
           <motion.div
             initial={{ opacity: 0, scale: 0 }}

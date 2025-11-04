@@ -8,6 +8,7 @@ import { useInView } from 'react-intersection-observer';
 import { useActiveSectionContext } from '@/utils/hooks';
 import { useForm } from 'react-hook-form';
 import toast, { Toaster } from 'react-hot-toast';
+import { BorderBeam } from "@/components/magicui/border-beam";
 
 interface DataProps {
   name: string;
@@ -87,6 +88,8 @@ export default function Contact() {
         once: true
       }}
     >
+            <BorderBeam size={250} duration={12} delay={9} />
+
       <SectionHeading>Contact Me</SectionHeading>
       <p className='text-gray-700 -mt-6 dark:text-white/80'>Please contact me directly at{" "}
         <a href="mailto:muhamadzulfiqor77@gmail.com" className='underline'>
