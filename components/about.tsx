@@ -4,8 +4,6 @@ import SectionHeading from './section-heading'
 import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
 import { useActiveSectionContext } from '@/utils/hooks';
-import { BorderBeam } from "@/components/magicui/border-beam";
-
 
 export default function About() {
   const { ref, inView } = useInView();
@@ -27,8 +25,6 @@ export default function About() {
       transition={{ delay: 0.175 }}
       id="about"
     >
-      <BorderBeam size={250} duration={12} delay={9} />
-
       <SectionHeading>About Me</SectionHeading>
 
       <p className="mb-3">
