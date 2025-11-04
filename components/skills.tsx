@@ -7,6 +7,7 @@ import { SiAndroidstudio, SiFigma, SiFlutter, SiGit, SiNextdotjs, SiReact, SiRed
 import Link from 'next/link';
 import { useActiveSectionContext, useIsMedium, useIsSmall } from '@/utils/hooks';
 
+
 export default function Skils() {
     const { ref, inView } = useInView();
     const { setActiveSection, timeLastClick } = useActiveSectionContext()

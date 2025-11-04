@@ -13,7 +13,6 @@ import imagePresensi from "@/public/epresensi-banner.png";
 import imagePagii from "@/public/pagii-logo.png";
 import imageAHB from "@/public/ahb.png";
 import imageMyYogya from "@/public/myYogya.png";
-import rawArtist from "@/public/rawartist.png";
 
 export const links = [
   {
@@ -57,7 +56,7 @@ export const experiencesData = [
     title: "Mobile Developer",
     location: "Bandung (West Java) - Indonesia",
     description:
-      "Self-taught Mobile Developer. I specialize in building cross-platform mobile applications with modern technologies. I learned through hands-on experience by working directly on real-world projects.",
+      "",
     icon: React.createElement(CgWorkAlt),
     date: "January 2020 - June 2022",
   },
@@ -81,7 +80,7 @@ export const projectsData = [
     storeIOS: "https://apps.apple.com/id/app/myyogya/id1468672431",
     detail: "",
   },
-  {
+   {
     title: "Pagii",
     description: "Easy Way to Check Attendance. Smart application to make it easier for employees and managers to manage attendance.",
     tags: ["React Native", "Javascript"],
@@ -89,16 +88,6 @@ export const projectsData = [
     storeAndroid: "https://play.google.com/store/apps/details?id=com.pagii&pcampaignid=web_share",
     storeIOS: "https://apps.apple.com/id/app/pagii-solusi-absensi/id1610290503",
     detail: ""
-  },
-  {
-    title: "RAWartists",
-    description:
-      "Showcasing the independent creative community Collaborative events run by creative entrepreneurs across the globe..",
-    tags: ["HTML", "Javascript"],
-    imageUrl: rawArtist,
-    storeAndroid: "",
-    storeIOS: "",
-    detail: "https://rawartists.com/"
   },
   {
     title: "Yogya Online Mobile",
@@ -109,7 +98,7 @@ export const projectsData = [
     storeIOS: "https://apps.apple.com/id/app/yogya-online/id1532864110",
     detail: "",
   },
-  {
+   {
     title: "Amanah Hartanah Bumiputera",
     description: "AHB is sponsored by PHB, and was previously managed by Maybank Asset Management Sdn Bhd (MAM) until PHBAM took over as manager on 1 July 2024. AHB’s Trustee is AmanahRaya Trustees Berhad.",
     tags: ["React Native", "Typescript"],
