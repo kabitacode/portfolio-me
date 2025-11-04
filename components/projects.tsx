@@ -56,16 +56,12 @@ export default function Projects() {
             className="w-full md:w-1/2 p-2">
             <div className="flex-1 m-2 md:mb-1 mb-3 overflow-hidden rounded-lg shadow-lg transition hover:shadow-2xl dark:shadow-gray-700/25">
                 <Link href={storeAndroid} target='_blank'>
-                    <div className='relative w-full aspect-[16/9] overflow-hidden'>
-                        <Image
-                            alt="Office"
-                            src={imageUrl}
-                            className="object-cover"
-                            quality={99}
-                            sizes="(max-width: 768px) 100vw, 50vw"
-                            fill
-                        />
-                    </div>
+                    <Image
+                        alt="Office"
+                        src={imageUrl}
+                        className="h-56 w-full object-cover"
+                        quality={99}
+                    />
                 </Link>
                 <div className="bg-white p-4 sm:p-6">
                     <Link href={storeAndroid} target='_blank'>

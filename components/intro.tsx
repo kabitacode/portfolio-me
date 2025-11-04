@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { AiOutlineArrowRight, AiOutlineCloudDownload, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { useInView } from 'react-intersection-observer';
 import { useActiveSectionContext } from '@/utils/hooks';
+import Meteors from "@/components/magicui/meteors";
 
 export default function Intro() {
 
@@ -23,6 +24,7 @@ export default function Intro() {
   return (
     <section ref={ref} className='mb-28 max-w-[50rem] text-center sm:mb-0'>
       <div className="flex items-center justify-center">
+      <Meteors number={30} />
         <div className='relative'>
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
@@ -81,10 +83,10 @@ export default function Intro() {
           setActiveSection("Contact");
           setTimeLastClick(Date.now());
         }} className='group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition'>Contact me here <AiOutlineArrowRight className='opacity-70 group-hover:translate-x-1 transition' /></Link>
-        <Link href={`${process.env.MY_CV}`} target='_blank'><p className='bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 group active:scale-105 transition cursor-pointer border border-black/10 dark:bg-white/10'>Download CV <AiOutlineCloudDownload className='opacity-60 group-hover:translate-y-1 cursor-pointer' /></p></Link>
+        <Link href={process.env.NEXT_PUBLIC_MY_CV ?? "#"} target='_blank'><p className='bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 group active:scale-105 transition cursor-pointer border border-black/10 dark:bg-white/10'>Download CV <AiOutlineCloudDownload className='opacity-60 group-hover:translate-y-1 cursor-pointer' /></p></Link>
         <div className='flex sm:flex-row flex-wrap sm:mt-0  mt-3'>
-          <a className='bg-white p-4 flex text-gray-700 mr-1 items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] group active:scale-105 transition cursor-pointer border border-black/10 hover:text-gray-950 dark:bg-white/10 dark:text-white/60' href={`${process.env.LINKEDIN}`} target='_blank'><AiFillLinkedin /></a>
-          <a className='bg-white p-4 flex text-gray-700 items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] group active:scale-105 transition cursor-pointer border border-black/10 hover:text-gray-950 dark:bg-white/10 dark:text-white/60' href={`${process.env.GITHUB}`} target='_blank'><AiFillGithub /></a>
+          <a className='bg-white p-4 flex text-gray-700 mr-1 items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] group active:scale-105 transition cursor-pointer border border-black/10 hover:text-gray-950 dark:bg-white/10 dark:text-white/60' href={process.env.NEXT_PUBLIC_LINKEDIN ?? "#"} target='_blank'><AiFillLinkedin /></a>
+          <a className='bg-white p-4 flex text-gray-700 items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] group active:scale-105 transition cursor-pointer border border-black/10 hover:text-gray-950 dark:bg-white/10 dark:text-white/60' href={process.env.NEXT_PUBLIC_GITHUB ?? "#"} target='_blank'><AiFillGithub /></a>
         </div>
       </motion.div>
     </section>
